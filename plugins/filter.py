@@ -30,7 +30,7 @@ from . import eor, events, get_string, mediainfo, ultroid_bot, ultroid_cmd
 from ._inline import something
 
 
-@ultroid_cmd(pattern="^Rommel ?(.*)")
+@ultroid_cmd(pattern="Rommel ?(.*)")
 async def af(e):
     wrd = (e.pattern_match.group(1)).lower()
     wt = await e.get_reply_message()
