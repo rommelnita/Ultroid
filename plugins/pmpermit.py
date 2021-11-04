@@ -68,11 +68,10 @@ UND = get_string("pmperm_1")
 
 if not Redis("PM_TEXT"):
     UNAPPROVED_MSG = (
-        f"Join sini dulu sayang @gabutasiksini, kalo udah baru aku bls"
-    )
+        f"Join sini dulu sayang @gabutasiksini, kalo udah join nanti baru aku chat lagi,bantu ramein yah ka")
 else:
     UNAPPROVED_MSG = (
-        f"Join sini dulu sayang @gabutasiksini, kalo udah baru aku bls"
+        ""
         + Redis("PM_TEXT")
     )
 
