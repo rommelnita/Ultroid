@@ -12,17 +12,19 @@
     SCHEDULES MESSAGE BASED ON SECONDS
 """
 import asyncio
-from . import *
+from . import eor, ulrroid_cmd
 
 @ultroid_cmd(pattern="smsg(.*)")
 async def snku(ult):
-    hm = await eod(ult, ". . .", time=1)
+    x = e.pattern_match.group(1)
+    xx = await e.get_reply_message()
+
     try:
         sec = ult.text.split(" ")
         time = sec[1]
         msg = sec[2]
     except:
-        return await eod(hm, "OOI YOU DID IT WRONG DO .help schedulemsg, time=2")
+        return await eor(hm, "OOI YOU DID IT WRONG DO .help schedulemsg, time=2")
     await asyncio.sleep(int(time))
     await bot.send_message(ult.chat_id, str(msg))
 
